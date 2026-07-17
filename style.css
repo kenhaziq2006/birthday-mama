@@ -1,0 +1,937 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+
+    background:#f8c8dc;
+
+    background-image:
+
+    linear-gradient(
+        45deg,
+        #f3b4cc 25%,
+        transparent 25%
+    ),
+
+    linear-gradient(
+        -45deg,
+        #f3b4cc 25%,
+        transparent 25%
+    ),
+
+    linear-gradient(
+        45deg,
+        transparent 75%,
+        #fff1e6 75%
+    ),
+
+    linear-gradient(
+        -45deg,
+        transparent 75%,
+        #fff1e6 75%
+    );
+
+
+    background-size:40px 40px;
+
+    background-position:
+    0 0,
+    0 20px,
+    20px -20px,
+    -20px 0;
+
+
+    color:#8b3a62;
+
+}
+
+
+
+/* =========================
+   NEW LOADING SCREEN
+========================= */
+
+
+#loading{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #8b0000,
+        #ff4d6d
+    );
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+    text-align:center;
+
+}
+
+
+
+.loading-heart{
+
+    width:150px;
+
+    height:150px;
+
+    object-fit:contain;
+
+    filter:
+    drop-shadow(0 0 30px pink);
+
+
+    animation:
+    heartFloat 3s infinite ease-in-out;
+
+}
+
+
+
+@keyframes heartFloat{
+
+
+    0%{
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+
+    50%{
+
+        transform:
+        translateY(-20px)
+        scale(1.08);
+
+    }
+
+
+    100%{
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+
+}
+
+
+
+#loading h2{
+
+    margin-top:35px;
+
+    font-size:26px;
+
+    font-weight:600;
+
+}
+
+
+
+#loading p{
+
+    margin-top:10px;
+
+    font-size:18px;
+
+    color:#ffd6e8;
+
+}
+
+
+
+
+
+/* ================= PAGE ================= */
+
+
+.page{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+
+
+.page.active{
+
+    display:flex;
+
+    animation:fade .8s;
+
+}
+
+
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/* ================= TEXT ================= */
+
+
+h1{
+
+    font-size:60px;
+
+}
+
+
+
+h2{
+
+    font-size:38px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+p{
+
+    font-size:18px;
+
+    max-width:650px;
+
+    line-height:1.8;
+
+}
+
+
+
+
+
+/* ================= BUTTON ================= */
+
+
+button{
+
+    margin:15px;
+
+    padding:15px 45px;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    background:#fffafc;
+
+    color:#d63384;
+
+    font-weight:bold;
+
+    transition:.4s;
+
+}
+
+
+
+button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 30px white;
+
+}
+
+
+
+
+
+/* ================= PASSWORD ================= */
+
+
+/* ================= PASSWORD IMPROVED ================= */
+
+#passwordPage h2{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+
+#passwordInput{
+
+    width:140px;
+    height:55px;
+
+    padding:10px;
+
+    font-size:25px;
+
+    border-radius:20px;
+
+    background:white;
+
+    color:#c2185b;
+
+    margin:10px;
+
+}
+
+
+
+.keypad{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,65px);
+
+    gap:12px;
+
+    margin-top:10px;
+
+}
+
+
+
+.keypad button{
+
+    width:65px;
+
+    height:65px;
+
+    padding:0;
+
+    margin:0;
+
+    border-radius:50%;
+
+    font-size:18px;
+
+}
+
+
+
+
+
+/* ================= FLOWER ================= */
+
+
+.rose{
+
+    width:260px;
+
+    animation:float 3s infinite;
+
+    filter:drop-shadow(0 0 25px pink);
+
+}
+
+
+
+@keyframes float{
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}
+
+
+
+
+
+
+
+/* ================= LETTER ================= */
+
+
+#typing{
+
+    max-width:700px;
+
+    font-size:20px;
+
+    line-height:2;
+
+    margin-top:25px;
+
+}
+
+
+
+
+
+/* ================= GALLERY ================= */
+
+
+/* ================= MEMORIES IMPROVED ================= */
+
+
+#galleryPage{
+
+    justify-content:flex-start;
+
+    padding-top:50px;
+
+}
+
+
+
+.gallery{
+
+    display:flex;
+
+    gap:18px;
+
+    width:90%;
+
+    max-width:900px;
+
+    overflow-x:auto;
+
+    padding:20px;
+
+    scroll-snap-type:x mandatory;
+
+}
+
+
+
+.gallery img{
+
+    width:200px;
+
+    height:240px;
+
+    object-fit:cover;
+
+    flex-shrink:0;
+
+    scroll-snap-align:center;
+
+
+    background:white;
+
+    padding:10px;
+
+
+    border-radius:15px;
+
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.4);
+
+
+    transform:rotate(-3deg);
+
+}
+
+
+
+.gallery img:nth-child(even){
+
+    transform:rotate(3deg);
+
+}
+
+
+
+.gallery img:hover{
+
+    transform:
+    scale(1.08)
+    rotate(0deg);
+
+}
+
+
+
+
+
+
+
+/* ================= FINAL ================= */
+
+
+.love{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:60px;
+
+    color:#ff006f;
+
+}
+
+
+
+
+
+/* ================= HEARTS ================= */
+
+
+.hearts{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+}
+
+
+
+.hearts span{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    animation:rise linear forwards;
+
+}
+
+
+
+@keyframes rise{
+
+
+    100%{
+
+        transform:translateY(-120vh);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+
+
+
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+
+@media(max-width:768px){
+
+
+    body{
+
+        overflow:hidden;
+
+    }
+
+
+
+    .page{
+
+    overflow-y:scroll;
+
+    scrollbar-width:none;
+
+    .page::-webkit-scrollbar{
+
+    width:0;
+
+    height:0;
+
+}
+
+}
+
+
+
+
+    h1{
+
+        font-size:42px;
+
+    }
+
+
+
+    h2{
+
+        font-size:25px;
+
+        line-height:1.4;
+
+    }
+
+
+
+    p{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+    }
+
+
+
+
+    /* BUTTON */
+
+
+    button{
+
+        width:180px;
+
+        padding:13px 20px;
+
+        font-size:16px;
+
+        margin:10px;
+
+    }
+
+
+
+
+
+    /* LOADING */
+
+
+    .loading-heart{
+
+        width:110px;
+
+        height:110px;
+
+    }
+
+
+    #loading h2{
+
+        font-size:22px;
+
+        padding:0 20px;
+
+    }
+
+
+    #loading p{
+
+        font-size:15px;
+
+    }
+
+
+
+
+
+    /* PASSWORD */
+
+
+    #passwordPage h2{
+
+        font-size:24px;
+
+    }
+
+
+
+    #passwordInput{
+
+        width:120px;
+
+        height:50px;
+
+        font-size:22px;
+
+    }
+
+
+
+    .keypad{
+
+        grid-template-columns:repeat(3,55px);
+
+        gap:10px;
+
+    }
+
+
+
+    .keypad button{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:16px;
+
+    }
+
+
+
+
+
+
+    /* FLOWER */
+
+
+    .rose{
+
+        width:160px;
+
+    }
+
+
+
+
+
+    /* LETTER */
+
+
+    #typing{
+
+        font-size:16px;
+
+        line-height:1.8;
+
+        max-height:55vh;
+
+        overflow-y:auto;
+
+    }
+
+
+
+
+
+
+    /* MEMORIES */
+
+
+    #galleryPage{
+
+        justify-content:flex-start;
+
+        padding-top:40px;
+
+    }
+
+
+
+    #galleryPage h2{
+
+        margin-bottom:10px;
+
+    }
+
+
+
+    .gallery{
+
+    overflow-x:scroll;
+
+    scrollbar-width:none;
+
+}
+
+
+.gallery::-webkit-scrollbar{
+
+    display:none;
+
+}
+
+
+
+    .gallery img{
+
+        width:150px;
+
+        height:190px;
+
+    }
+
+
+
+
+
+    /* FINAL */
+
+
+    .love{
+
+        font-size:45px;
+
+    }
+
+
+
+}
+
+/* =========================
+   PINK + CREAM THEME FIX
+========================= */
+
+
+/* TEXT COLOR */
+
+h1,
+h2{
+
+    color:#b23a6f;
+
+}
+
+
+p{
+
+    color:#8b5a70;
+
+}
+
+
+
+/* BUTTON COLOR */
+
+button{
+
+    background:#fffafc;
+
+    color:#d63384;
+
+    border:2px solid #ffd1e3;
+
+}
+
+
+
+/* =========================
+   LOADING SCREEN COLOR
+========================= */
+
+
+#loading{
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #f8c8dc,
+        #fff1e6
+    );
+
+
+}
+
+
+#loading h2{
+
+    color:#b23a6f;
+
+}
+
+
+#loading p{
+
+    color:#8b5a70;
+
+}
+
+
+
+/* HEART IMAGE LOADING */
+
+.loading-heart{
+
+    filter:
+    drop-shadow(0 0 25px #ff8fb8);
+
+}
+
+/* HIDE SCROLLBAR BUT KEEP FUNCTION */
+
+html,
+body{
+
+    scrollbar-width:none; /* Firefox */
+
+}
+
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar{
+
+    display:none; /* Chrome */
+
+}
+
+
+.page::-webkit-scrollbar{
+
+    display:none;
+
+}

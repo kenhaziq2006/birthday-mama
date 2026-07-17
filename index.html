@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>Happy Birthday!!</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- LOADING -->
+
+<div id="loading">
+
+    <img 
+        src="love.png"
+        class="loading-heart"
+        alt="Heart"
+    >
+
+    <h2>
+        Preparing something special...
+    </h2>
+
+    <p>
+        For You ❤️
+    </p>
+
+</div>
+
+
+
+<!-- INTRO -->
+
+<section id="intro" class="page active">
+
+    <h1>
+        HAPPY BIRTHDAY
+    </h1>
+
+    <h2>
+        I Made You A Website ❤️
+    </h2>
+
+    <p>
+        Please click the button below to reveal your birthday surprise! 🎁✨
+    </p>
+
+
+    <div class="buttons">
+
+        <button id="nextBtn">
+            Next 💖
+        </button>
+
+
+        <button id="skipBtn">
+            Skip 😔
+        </button>
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- SKIP PAGE -->
+
+<section id="skipPage" class="page">
+
+    <h1>
+        💔
+    </h1>
+
+
+    <h2>
+        Oh Nooo
+    </h2>
+
+
+    <p>
+        I spent hours making this website...
+        and you skipped it 🥹
+    </p>
+
+
+    <button id="backBtn">
+        Go Back ❤️
+    </button>
+
+
+</section>
+
+
+
+
+
+<!-- PASSWORD -->
+
+<section id="passwordPage" class="page">
+
+
+    <h2>
+        Enter Secret Code ❤️
+    </h2>
+
+
+    <input 
+        type="password"
+        id="passwordInput"
+        placeholder="••••"
+        readonly
+    >
+
+
+
+    <div class="keypad">
+
+
+        <button class="num">1</button>
+        <button class="num">2</button>
+        <button class="num">3</button>
+
+
+        <button class="num">4</button>
+        <button class="num">5</button>
+        <button class="num">6</button>
+
+
+        <button class="num">7</button>
+        <button class="num">8</button>
+        <button class="num">9</button>
+
+
+        <button id="clear">
+            C
+        </button>
+
+
+        <button class="num">
+            0
+        </button>
+
+
+        <button id="enter">
+            ❤️
+        </button>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+<!-- FLOWER -->
+
+<section id="flowerPage" class="page">
+
+
+    <img 
+        src="Rose.png"
+        class="rose"
+        alt="Rose"
+    >
+
+
+    <h2>
+        A flower for you 🌹
+    </h2>
+
+
+    <button id="flowerNext">
+        Continue ❤️
+    </button>
+
+
+</section>
+
+
+
+
+
+
+<!-- LETTER -->
+
+<section id="letterPage" class="page">
+
+
+    <h1>
+        💌
+    </h1>
+
+
+    <h2>
+        Dear Mama,
+    </h2>
+
+
+    <p id="typing"></p>
+
+
+
+    <button id="galleryBtn">
+        Next ❤️
+    </button>
+
+
+</section>
+
+
+
+
+
+
+<!-- GALLERY -->
+
+<section id="galleryPage" class="page">
+
+
+    <h2>
+        Our Memories 📸
+    </h2>
+
+
+
+    <div class="gallery">
+
+
+        <img src="Gambar 1.jpg" alt="Memory 1">
+
+        <img src="Gambar 2.jpg" alt="Memory 2">
+
+        <img src="Gambar 3.jpg" alt="Memory 3">
+
+        <img src="Gambar 4.jpg" alt="Memory 4">
+
+        <img src="Gambar 5.jpg" alt="Memory 5">
+
+        <img src="Gambar 6.jpg" alt="Memory 6">
+
+
+    </div>
+
+
+
+    <button id="finalBtn">
+        Final ❤️
+    </button>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- FINAL -->
+
+<section id="finalPage" class="page">
+
+
+    <h1>
+        ❤️
+    </h1>
+
+
+    <h2>
+        Thank You.
+    </h2>
+
+
+    <p>
+        I hope this little website
+        makes you smile.
+    </p>
+
+
+
+    <p class="love">
+
+        Happy
+        Birthday Mama.
+
+    </p>
+
+
+</section>
+
+
+
+
+
+
+<!-- FLOATING HEARTS -->
+
+<div class="hearts"></div>
+
+
+
+
+
+<!-- MUSIC -->
+
+<audio 
+    id="bgMusic"
+    src="music.mp3"
+    loop>
+</audio>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
